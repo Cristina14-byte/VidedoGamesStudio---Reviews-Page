@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.cristina.dbvideogamestudio.ReviewController" spacing="10" alignment="TOP_CENTER">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Add a Review" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Select Customer:"/>
+        <ComboBox fx:id="customerComboBox" promptText="Choose a customer" prefWidth="250"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Select Game/DLC:"/>
+        <ComboBox fx:id="gameOrDlcComboBox" promptText="Choose a game or DLC" prefWidth="250"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Rating (1-10):"/>
+        <Spinner fx:id="ratingSpinner" prefWidth="100"/>
+    </HBox>
+
+    <Label text="Comments:"/>
+    <TextArea fx:id="reviewCommentsTextArea" promptText="Enter your review" prefRowCount="4" prefWidth="300"/>
+
+    <Button fx:id="submitButton" text="Submit Review" onAction="#handleSubmitButtonAction" prefWidth="150"/>
+</VBox>
